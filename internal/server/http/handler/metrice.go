@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/fizzbuzz-api/internal/metric"
+	"github.com/fizzbuzz-endpoint/internal/metric"
 	"github.com/gol4ng/logger"
 )
 
@@ -12,6 +12,7 @@ import (
 // and the top used values for every parameter.
 func PrintMetrics(log logger.LoggerInterface, m *metric.Metric) func(http.ResponseWriter, *http.Request) {
 	return func(response http.ResponseWriter, request *http.Request) {
+		response.Header().Set("Content-Type", "application/json; charset=UTF-8")
 
 		m.Lock()
 		output := metric.MetricsResponse{
@@ -23,9 +24,6 @@ func PrintMetrics(log logger.LoggerInterface, m *metric.Metric) func(http.Respon
 			Query:   m.CQuery.GetTop(),
 		}
 		m.Unlock()
-
-		response.Header().Set("Content-Type", "application/json; charset=UTF-8")
-		defer func() { _ = request.Body.Close() }()
 
 		payload, err := json.Marshal(output)
 		if err != nil {

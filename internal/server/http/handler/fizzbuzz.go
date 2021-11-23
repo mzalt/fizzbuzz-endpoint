@@ -8,15 +8,13 @@ import (
 
 	"github.com/gol4ng/logger"
 
-	"github.com/fizzbuzz-api/internal/model"
+	"github.com/fizzbuzz-endpoint/internal/model"
 )
 
 // MyFizzBuzz endpoint
 func MyFizzBuzz(log logger.LoggerInterface) func(http.ResponseWriter, *http.Request) {
 	return func(response http.ResponseWriter, request *http.Request) {
-
 		response.Header().Set("Content-Type", "application/json; charset=UTF-8")
-		defer func() { _ = request.Body.Close() }()
 
 		query := request.URL.Query()
 		int1, _ := strconv.Atoi(query.Get("int1"))

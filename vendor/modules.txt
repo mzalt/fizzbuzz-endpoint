@@ -1,0 +1,39 @@
+# github.com/dgryski/go-sip13 v0.0.0-20200911182023-62edffca9245
+## explicit
+github.com/dgryski/go-sip13
+# github.com/dgryski/go-topk v0.0.0-20191119021947-593b4f2374c9
+## explicit
+github.com/dgryski/go-topk
+# github.com/etf1/go-config v0.3.1
+## explicit; go 1.13
+github.com/etf1/go-config
+github.com/etf1/go-config/dotenv
+github.com/etf1/go-config/env
+github.com/etf1/go-config/prefix
+# github.com/gol4ng/logger v0.5.9
+## explicit; go 1.12
+github.com/gol4ng/logger
+github.com/gol4ng/logger/formatter
+github.com/gol4ng/logger/handler
+github.com/gol4ng/logger/middleware
+github.com/gol4ng/logger/socket
+github.com/gol4ng/logger/writer
+github.com/gol4ng/logger/writer/provider
+# github.com/gol4ng/signal v1.1.0
+## explicit; go 1.12
+github.com/gol4ng/signal
+# github.com/gorilla/mux v1.8.0
+## explicit; go 1.12
+github.com/gorilla/mux
+# github.com/heetch/confita v0.9.0
+## explicit; go 1.12
+github.com/heetch/confita
+github.com/heetch/confita/backend
+github.com/heetch/confita/backend/env
+github.com/heetch/confita/backend/flags
+# github.com/joho/godotenv v1.3.0
+## explicit
+github.com/joho/godotenv
+# github.com/pkg/errors v0.8.1
+## explicit
+github.com/pkg/errors

@@ -3,8 +3,8 @@ package service
 import (
 	"sync"
 
-	"github.com/fizzbuzz-api/config"
-	"github.com/fizzbuzz-api/internal/metric"
+	"github.com/fizzbuzz-endpoint/config"
+	"github.com/fizzbuzz-endpoint/internal/metric"
 
 	"github.com/gol4ng/logger"
 )

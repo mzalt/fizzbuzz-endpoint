@@ -3,8 +3,8 @@ package service
 import (
 	"net/http"
 
-	httpSrv "github.com/fizzbuzz-api/internal/server/http"
-	"github.com/fizzbuzz-api/internal/server/http/handler"
+	httpSrv "github.com/fizzbuzz-endpoint/internal/server/http"
+	"github.com/fizzbuzz-endpoint/internal/server/http/handler"
 
 	"github.com/gorilla/mux"
 )
@@ -21,8 +21,8 @@ func (container *Container) GetHTTPServer() *httpSrv.Server {
 func (container *Container) getHTTPHandler() http.Handler {
 	r := mux.NewRouter()
 	r.Use(container.MonitoringMiddleware)
-	r.Path("/fizzbuzz-api/fizzbuzz/").Methods("GET").HandlerFunc(handler.MyFizzBuzz(container.GetLogger()))
-	r.Path("/fizzbuzz-api/fizzbuzz/metrics").HandlerFunc(handler.PrintMetrics(container.GetLogger(), container.GetMetric()))
+	r.Path("/mzalt/leboncoin/fizzbuzz/").Methods("GET").HandlerFunc(handler.MyFizzBuzz(container.GetLogger()))
+	r.Path("/mzalt/leboncoin/fizzbuzz/metrics").HandlerFunc(handler.PrintMetrics(container.GetLogger(), container.GetMetric()))
 
 	return r
 }

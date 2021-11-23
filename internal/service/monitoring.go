@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/fizzbuzz-api/internal/metric"
+	"github.com/fizzbuzz-endpoint/internal/metric"
 )
 
 // GetMetric intializes once and returns Metric object

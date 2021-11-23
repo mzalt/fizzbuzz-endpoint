@@ -5,8 +5,8 @@ import (
 	"os"
 	"syscall"
 
-	"github.com/fizzbuzz-api/config"
-	"github.com/fizzbuzz-api/internal/service"
+	"github.com/fizzbuzz-endpoint/config"
+	"github.com/fizzbuzz-endpoint/internal/service"
 
 	"github.com/gol4ng/signal"
 )
