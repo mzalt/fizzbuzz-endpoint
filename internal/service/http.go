@@ -21,7 +21,7 @@ func (container *Container) GetHTTPServer() *httpSrv.Server {
 func (container *Container) getHTTPHandler() http.Handler {
 	r := mux.NewRouter()
 	r.Use(container.MonitoringMiddleware)
-	r.Path("/mzalt/leboncoin/fizzbuzz/").Methods("GET").HandlerFunc(handler.MyFizzBuzz(container.GetLogger()))
+	r.Path("/mzalt/leboncoin/fizzbuzz/").Methods("GET").HandlerFunc(handler.MyFizzBuzzHandler(container.GetLogger()))
 	r.Path("/mzalt/leboncoin/fizzbuzz/metrics").HandlerFunc(handler.PrintMetrics(container.GetLogger(), container.GetMetric()))
 
 	return r

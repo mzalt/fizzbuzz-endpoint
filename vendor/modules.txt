@@ -1,3 +1,6 @@
+# github.com/davecgh/go-spew v1.1.1
+## explicit
+github.com/davecgh/go-spew/spew
 # github.com/dgryski/go-sip13 v0.0.0-20200911182023-62edffca9245
 ## explicit
 github.com/dgryski/go-sip13
@@ -37,3 +40,12 @@ github.com/joho/godotenv
 # github.com/pkg/errors v0.8.1
 ## explicit
 github.com/pkg/errors
+# github.com/pmezard/go-difflib v1.0.0
+## explicit
+github.com/pmezard/go-difflib/difflib
+# github.com/stretchr/testify v1.7.0
+## explicit; go 1.13
+github.com/stretchr/testify/assert
+# gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+## explicit
+gopkg.in/yaml.v3

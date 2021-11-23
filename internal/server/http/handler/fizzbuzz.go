@@ -11,8 +11,8 @@ import (
 	"github.com/fizzbuzz-endpoint/internal/model"
 )
 
-// MyFizzBuzz endpoint
-func MyFizzBuzz(log logger.LoggerInterface) func(http.ResponseWriter, *http.Request) {
+// MyFizzBuzzHandler handler
+func MyFizzBuzzHandler(log logger.LoggerInterface) func(http.ResponseWriter, *http.Request) {
 	return func(response http.ResponseWriter, request *http.Request) {
 		response.Header().Set("Content-Type", "application/json; charset=UTF-8")
 
@@ -28,7 +28,7 @@ func MyFizzBuzz(log logger.LoggerInterface) func(http.ResponseWriter, *http.Requ
 			Str2:    query.Get("str2"),
 		}
 
-		result, err := myFizzBuzz(input)
+		result, err := MyFizzBuzz(input)
 		if err != nil {
 			log.Error("invalid input : %err%", logger.Error("err", err))
 			response.WriteHeader(http.StatusBadRequest)
@@ -44,7 +44,8 @@ func MyFizzBuzz(log logger.LoggerInterface) func(http.ResponseWriter, *http.Requ
 	}
 }
 
-func myFizzBuzz(req *model.FizzbuzzInpute) (*model.FizzbuzzResponse, error) {
+// MyFizzBuzz function
+func MyFizzBuzz(req *model.FizzbuzzInpute) (*model.FizzbuzzResponse, error) {
 	if !req.CheckInput() {
 		return nil, fmt.Errorf("bad values for number1 or/and number2")
 	}
